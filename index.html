@@ -4,28 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Гусев Данила Павлович 10 лаба</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div>
-    Первый игрок: <span id="score_x">0</span>
-</div>
-<div>
-    Второй игрок: <span id="score_o">0</span>
-</div>
+<!-- Заголовок и краткое описание-->
+<!-- Сделать стиль-->
+<!-- Подзаголовок кол-во побед-->
+<h1>Крестики нолики</h1>
+<ul>    
+    <hr>
+    <li>Игроки по очереди ставят на свободные клетки поля 3х3 знаки (один всегда крестики, другой всегда нолики).</li>
+    <hr>
+    <li>Первый, выстроивший в ряд 3 своих фигуры по вертикали, горизонтали или диагонали, выигрывает.</li> 
+    <hr>
+    <li>Первый ход делает игрок, ставящий крестики.</li>
+    <hr>
+</ul>
+<div class="Game">
+    <div>
+        Побед у первого игрока: <span id="score_x">0</span>
+    </div>
+    <div class="game_span">
+        Побед у второго игрока: <span id="score_o">0</span>
+    </div>
 
-<div id="player">
+    <div id="player" class="game_span">
 
-</div>
+    </div>
 
-<div>
-    <canvas id="tictac" width="500" height="500"></canvas>
-    <div id="result">
+    <div class="game_span">
+        <canvas id="tictac" width="300" height="300"></canvas>
+        <div id="result">
 
+        </div>
     </div>
 </div>
 
-
-<div>
+<div class="buttons">
     <button id="new_round">Новый раунд</button>
     <button id="reset">Сброс игры</button>
 </div>
