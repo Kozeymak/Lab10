@@ -88,7 +88,7 @@ function makeTurn(e) {
         if(winner===null){
             player=(player+1)%2; 
             document.getElementById('player').innerText=`Ходит игрок номер ${player+1}`;
-            if(!(true in empty)){
+            if(empty.includes(true) === false){
                 result(2);
             }
         } else {
@@ -130,6 +130,7 @@ function findWinner() {
 function newRound() {
     context.clearRect(0, 0, canvas.width, canvas.height);
     drawField();
+    result(3);
 }
 
 function reset() {
@@ -140,6 +141,7 @@ function reset() {
     score_o=0;
     document.getElementById('score_o').innerText=score_o;
     document.getElementById('score_x').innerText=score_x;
+    result(3);
 }
 
 function result(opt) {
@@ -152,6 +154,9 @@ function result(opt) {
             break;
         case 2:
             resDiv.innerText='Ничья';
+            break;
+	case 3:
+            resDiv.innerText='';
             break;
     }
     resDiv.style.visibility='visible';
